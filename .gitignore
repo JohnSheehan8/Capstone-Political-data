@@ -1,3 +1,6 @@
+# ignore the data i am using
+data/en-US.csv
+*.csv
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

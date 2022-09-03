@@ -75,7 +75,7 @@ Explore how feeding in politcal statements from outside of facebook do with my m
 
 ## For More Information
 
-See the full analysis in the [Jupyter Notebook](Capstone_final.ipynb) or review [this presentation](final_bacefook_presentation.pdf).
+See the full analysis in the [Jupyter Notebook](Capstone_final.ipynb) or review [this presentation](Presentation.pdf).
 
 For additional info, contact me:
 

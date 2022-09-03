@@ -30,29 +30,16 @@ I used Natural Language Processing to clean up the ad messages as well as the na
 
 ![](images/party_ad_distribution.png)
 ## Visualizations
-Now that i have gotten my final datafram situated i wanted to look at the different messaging being portrayed by each party so i made a bar graph of the top 20 words for both parties.
-![](images/Top 20 Word Frequency for democrats.png)
-![](images/Top 20 Word Frequency for republicans.png)
-
-I also made wordclouds in the shape of two prominent figures of each party: Donald Trump and Joe Biden.
+Now that i have gotten my final datafram situated i wanted to look at the different messaging being portrayed by each party so i made a wordclouds in the shape of two prominent figures of each party, Donald Trump and Joe Biden, showing common words used in the ad messaging pushed by each party.
 ![](images/dem_cloud.png)
 ![](images/rep_cloud.png)
 
 ## Modeling 
-Our modeling efforts involved an iterative process through different classifiers to find the one that performed best with default hyperparameters. We evaluated our model performance using accuracy scoring because the cost of an incorrect prediction is relatively low, and we are interested in seeing how well a model predicts each of the individual classes. We then utilized a grid search to tune the hyperparameters of our best performing model in an attempt to further improve performance. The models are presented in order within the [completed notebook](bacefook_notebook.ipynb) from worst to best performing to demonstrate our iterative process. For the purposes of this summary, we will focus on the final random forest classifier model.
+My modeling efforts involved an iterative process through different classifiers to find the one that performed best with default hyperparameters. I evaluated our model performance using accuracy scoring because the cost of an incorrect prediction is relatively low, and I was more interested in seeing how well a model predicts each of Political Party. I then utilized a grid search to tune the hyperparameters of my best performing model in an attempt to further improve performance. The models are presented within the [completed notebook](Capstone_final.ipynb) to demonstrate my iterative process. For the purposes of this summary, I will focus on my final model: a tuned Stochastic Gradient Descent Classifier model.
 
-The following graph shows the accuracy score of each successive model, and highlights the superior performance of the random forest classifier.
+The following graph shows the accuracy score of a handful of models i performed when testing, and highlights the superior performance of my final model.
 
 ![](images/mod_perf.png)
-
-## Results & Model Evaluation
-With an accuracy score on the test data of 67%, our final model is performing better than the baseline on unseen data. There is a great deal of room for improvement however, as it struggles heavily with correctly identifying negative sentiment. The model only identified 21% of negative tweets correctly in our test data, and only 46% of positive tweets in the test data. Its superior accuracy score is due largely to its success in accurately classifying neutral tweets as neutral. With more than 60% of the dataset comprised of neutral tweets, the success in predicting that class outweighs its poor performance with tweets that express emotion.
-
-Given the class imbalance present in the dataset, it is likely that the model doesn't have enough examples of negative sentiment to perform well. This could be improved with a larger (or at minimum, more balanced) dataset. In order to be useful for classifying new tweets, the model would need to significantly reduce or ideally eliminate the need for a human to manually check its work. Our model accomplishes that with a 67% accuracy rate, but still leaves quite a bit of room for error and therefore creates a requirement for manual follow-up. Further tuning of the model's hyperparameters are unlikely to produce significant improvement, meaning that more data (and specifically more negative data) is needed to improve the model's results.
-
-If no further data can be reasonably obtained for training, a practical use of the model could be to separate future tweets into groups of "neutral" and "needing review". The "needing review" class could then be labeled by a human or fed to a binary classifier that might have success identifying them as positive or negative.
-
-![](images/final_sentiment_perf.png)
 
 ## Conclusion & Limitations
 

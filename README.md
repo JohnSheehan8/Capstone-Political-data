@@ -31,15 +31,18 @@ I used Natural Language Processing to clean up the ad messages as well as the na
 ![](images/party_ad_distribution.png)
 ## Visualizations
 Now that i have gotten my final datafram situated i wanted to look at the different messaging being portrayed by each party so i made a wordclouds in the shape of two prominent figures of each party, Donald Trump and Joe Biden, showing common words used in the ad messaging pushed by each party.
+
 ![](images/dem_cloud.png)
 ![](images/rep_cloud.png)
 
 ## Modeling 
 My modeling efforts involved an iterative process through different classifiers to find the one that performed best with default hyperparameters. I evaluated our model performance using accuracy scoring because the cost of an incorrect prediction is relatively low, and I was more interested in seeing how well a model predicts each of Political Party. I then utilized a grid search to tune the hyperparameters of my best performing model in an attempt to further improve performance. The models are presented within the [completed notebook](Capstone_final.ipynb) to demonstrate my iterative process. For the purposes of this summary, I will focus on my final model: a tuned Stochastic Gradient Descent Classifier model.
 
-The following graph shows the accuracy score of a handful of models i performed when testing, and highlights the superior performance of my final model.
+The following graph shows the accuracy score of a handful of models i performed when testing, and highlights the superior performance of my final model which stemmed from the base SGD model next to it.
 
 ![](images/mod_perf.png)
+
+The Final model i decided on had been tuned over a number of grid searches to get a small boost in accuracy percentage going from .986 to .988 accuracy on the training data and also getting a results of .989 on the testing (unseen) data. Im sure with more time i could get the accuracy score up slightly more but my final model correctly predicts if an ad is republican or democrat roughly 99% of the time which is huge for determining what party is pushing what agenda and for becoming more informed on what party is pushing what ad.
 
 ## Conclusion & Limitations
 

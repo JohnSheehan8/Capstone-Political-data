@@ -19,27 +19,16 @@ The data i am going to be using is a dataset from ProPublica that contains 22218
 
 By using this data i can narrow down my scope to only politicians ads so that i will be using only extremely polarizing ads to hopefully be able to pick up on ads that are from the democrat or republican party. One flaw with this dataset is that because i am only using data from the years 2017-2020 the model might be scewed toward predicting ads from those years, since agendas can change overtime the common words used during this period might be different from current or future ads.
 
-After checking the base data i wanted to look at i realized that i needed to import a second dataset of a list of politicians so that i can classify the names of the people who ran ads within the first dataset as either democrat or republican.
+After checking the base data i wanted to look at, i realized that i needed to import a second dataset of a list of politicians so that i can classify the names of the people who ran ads within the first dataset as either democrat or republican.
 
 This dataset is a collection of all current members of congress, its not perfect since some of these ads are from memebers of congress in the past but i will manually go through and add a few additions to this list to include some important figures that do not show up in this dataset such as donald trump and joe biden.
 
 With these two datasets i will create a model that will be able to accurately predict party affilliation from ads to a considerable amount.
 
-![](images/sent_dist.png)
+## Data cleanup and Final Dataset
+I used Natural Language Processing to clean up the ad messages as well as the names of those who ran the ads. Afterwards i created a new dataframe which only selected ads run by those who were listed on the second dataset and classified each ad into being from the republican or democratic party. This left me with a dataframe of 19065 political ads that were run by politicians. The vast majority of the ads run were from the democratic party as you can see from the pie chart below
 
-Natural language processing requires a significant level of preprocessing prior to modeling, due to the variety of features in a dataset. These efforts are visible in the final notebook, and included the following steps:
-- Removing Twitter handles & hyperlinks
-- Removing punctuation
-- Tokenizing and Lemmatizing the words in each tweet
-- Removing stopwords (both common English words and a custom set that is unique to our dataset)
-
-After preprocessing was complete, we visualized the most common words in each sentiment class as follows:
-
-![](images/Top%2010%20words%20in%20Positive%20Tweets.png)
-
-![](images/Top%2010%20words%20in%20Negative%20Tweets.png)
-
-![](images/Top%2010%20words%20in%20Neutral%20Tweets.png)
+![](images/party_ad_distribution.png)
 
 ## Modeling 
 Our modeling efforts involved an iterative process through different classifiers to find the one that performed best with default hyperparameters. We evaluated our model performance using accuracy scoring because the cost of an incorrect prediction is relatively low, and we are interested in seeing how well a model predicts each of the individual classes. We then utilized a grid search to tune the hyperparameters of our best performing model in an attempt to further improve performance. The models are presented in order within the [completed notebook](bacefook_notebook.ipynb) from worst to best performing to demonstrate our iterative process. For the purposes of this summary, we will focus on the final random forest classifier model.

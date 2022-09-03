@@ -29,6 +29,13 @@ With these two datasets i will create a model that will be able to accurately pr
 I used Natural Language Processing to clean up the ad messages as well as the names of those who ran the ads. Afterwards i created a new dataframe which only selected ads run by those who were listed on the second dataset and classified each ad into being from the republican or democratic party. This left me with a dataframe of 19065 political ads that were run by politicians. The vast majority of the ads run were from the democratic party as you can see from the pie chart below
 
 ![](images/party_ad_distribution.png)
+## Visualizations
+Now that i have gotten my final datafram situated i wanted to look at the different messaging being portrayed by each party so i made a bar graph of the top 20 words for both parties.
+![](images/Top 20 Word Frequency for democrats.png)
+![](images/Top 20 Word Frequency for republicans.png)
+I also made wordclouds in the shape of two prominent figures of each party: Donald Trump and Joe Biden.
+![](images/dem_cloud.png)
+![](images/rep_cloud.png)
 
 ## Modeling 
 Our modeling efforts involved an iterative process through different classifiers to find the one that performed best with default hyperparameters. We evaluated our model performance using accuracy scoring because the cost of an incorrect prediction is relatively low, and we are interested in seeing how well a model predicts each of the individual classes. We then utilized a grid search to tune the hyperparameters of our best performing model in an attempt to further improve performance. The models are presented in order within the [completed notebook](bacefook_notebook.ipynb) from worst to best performing to demonstrate our iterative process. For the purposes of this summary, we will focus on the final random forest classifier model.

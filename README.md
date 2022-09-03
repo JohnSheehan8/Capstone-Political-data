@@ -33,6 +33,7 @@ I used Natural Language Processing to clean up the ad messages as well as the na
 Now that i have gotten my final datafram situated i wanted to look at the different messaging being portrayed by each party so i made a bar graph of the top 20 words for both parties.
 ![](images/Top 20 Word Frequency for democrats.png)
 ![](images/Top 20 Word Frequency for republicans.png)
+
 I also made wordclouds in the shape of two prominent figures of each party: Donald Trump and Joe Biden.
 ![](images/dem_cloud.png)
 ![](images/rep_cloud.png)

@@ -3,8 +3,14 @@ By: John Sheehan
 
 The first dataset that i worked with is too large to be stored on github so if you want to access the data use this link: https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook
 
+To access this data you have to download the file directly from the link i have provided and then move the csv file into a folder within your repository i have created a data folder which i have added to my gitignore on github as the csv file is too big to be stored on the github servers. If the csv file is correctly within your repository you should be able to navigate to wherever you put it to read the csv through pandas like i have done above.
+
+
 the second dataset is also fairly large and was a csv file collected from this github repository: https://github.com/unitedstates/congress-legislators
 (The legislators-current csv)
+
+Similar to the csv file above this file was too large to store in the github repository so to access this file you have to follow the link i have provided in the cell above and then download the csv file from the legislators-current section in the github repository that i recieved this data from then move the csv file into a folder in your repository to be able to read the file with pandas.
+
 ## Business Problem
 Hi my name is John Sheehan and i am a data scientist working to help experts in the political science field or politicans themselves gauge the messages and main interests other politcians are pushing for during election cycles. By taking any ads and figuring out what party affiliation the ads are associated with as well as the common words being pushed by these ads political scientiest can figure out whether politicians of the same party are pushing similar types of messaging across each political party. Another aspect of the model that im building is that voters will be able to determine what party is associated with ads that push for agendas on polls. Politicians can use this data to pinpoint common talking points their opposition tends to use to come up with counter arguments during debates or their own messaging
 

@@ -3,7 +3,7 @@ By: John Sheehan
 
 The first dataset that i worked with is too large to be stored on github so if you want to access the data use this link: https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook
 
-To access this data you have to download the file directly from the link i have provided and then move the csv file into a folder within your repository i have created a data folder which i have added to my gitignore on github as the csv file is too big to be stored on the github servers. If the csv file is correctly within your repository you should be able to navigate to wherever you put it to read the csv through pandas like i have done above.
+To access this data you have to download the file directly from the link i have provided and then move the csv file into a folder within your repository i have created a data folder which i have added to my gitignore on github as the csv file is too big to be stored on the github servers. If the csv file is correctly within your repository you should be able to navigate to wherever you put it to read the csv through pandas like i have done in my notebook.
 
 
 the second dataset is also fairly large and was a csv file collected from this github repository: https://github.com/unitedstates/congress-legislators
